@@ -50,6 +50,8 @@ jobs:
     name: Run
     needs: [ test, dev ]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Download Go binary artifact
         uses: actions/download-artifact@v4
@@ -62,3 +64,9 @@ jobs:
 
       - name: Run Go binary
         run: ./build/hello
+        
+      - name: Adding Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "release.tar.gz,foo/*.txt"
+          bodyFile: "body.md"
