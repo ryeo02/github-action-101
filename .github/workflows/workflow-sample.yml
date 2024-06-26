@@ -70,4 +70,4 @@ jobs:
         with:
           artifacts: release go binary
           bodyFile: body text
-          tags: V0.0.1
+          tag: V0.0.1
