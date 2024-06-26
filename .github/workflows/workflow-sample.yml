@@ -44,8 +44,8 @@ jobs:
     steps:
       - name: Set Dev
         id: set-dev-stage
-        run: echo ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }
-        
+        run: echo ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
   run:
     name: Run
     needs: [ test, dev ]
