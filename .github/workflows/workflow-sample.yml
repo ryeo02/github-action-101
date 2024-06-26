@@ -68,6 +68,5 @@ jobs:
       - name: Adding Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: release go binary
-          bodyFile: body text
+          body : body text
           tag: V0.0.1
